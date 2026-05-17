@@ -36,7 +36,9 @@ public class SlideSuperStructure extends MotorPIDSlideSubsystem {
   // intakeClawServo
   public static double IntakeClawServo_OPEN = 0.8;
   public static double IntakeClawServo_OPENWIDER = 0.2;
-  public static double IntakeClawServo_GRAB = 0.305;
+  public static double IntakeClawServo_GRAB = 0.58;
+  // previous: 0.30
+
   // wristServo
   public static double WristServo_UP = 0.68;
   public static double WristServo_DOWN = 0.97;
@@ -141,6 +143,7 @@ public class SlideSuperStructure extends MotorPIDSlideSubsystem {
   //  }
 
   public void foldSlideStructure() {
+//    slideMotor.setTargetPosition();
     setTurnServo(TurnServo.DEG_0.turnAngleDeg);
     slideArmServo.setPosition(SlideArmServo_FOLD);
     wristServo.setPosition(WristServo_FOLD);
